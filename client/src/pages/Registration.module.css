@@ -1,0 +1,63 @@
+.form-container {
+  display: flex;
+  justify-content: flex-start; /* Выравнивание формы слева по горизонтали */
+  align-items: flex-start; /* Выравнивание формы слева по вертикали */
+  height: 100vh; /* Занимает всю высоту экрана */
+  padding-left: 0; /* Убираем отступ слева */
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 500px; /* Ширина формы */
+  padding: 30px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    padding-left: 5%; /* Уменьшаем отступ на мобильных устройствах */
+  }
+
+  .form {
+    width: 90%; /* Форма будет шире на маленьких экранах */
+    padding: 20px;
+  }
+}

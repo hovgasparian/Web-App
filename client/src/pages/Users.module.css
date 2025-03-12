@@ -1,0 +1,154 @@
+/* Основной контейнер */
+.userList {
+  width: 100%;
+  height: auto;
+  margin: 40px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #f0f0f0, #ffffff);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+
+/* Заголовок */
+.userList h1 {
+    font-size: 26px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Поисковая строка */
+.searchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.searchContainer input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 280px;
+  transition: all 0.3s ease-in-out;
+}
+
+.searchContainer input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+.searchContainer button {
+  padding: 10px 16px;
+  font-size: 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.searchContainer button:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+
+/* Список пользователей */
+.userItem {
+  background: rgba(0, 123, 255, 0.1);
+  padding: 15px;
+  margin-bottom: 10px;
+  border-left: 4px solid #007bff;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.userItem:hover {
+  background: rgba(0, 123, 255, 0.2);
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Данные пользователей */
+.userItem span {
+  font-weight: bold;
+}
+
+.userItem .userEmail {
+  font-size: 14px;
+  color: #555;
+}
+
+.createButton {
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.createButton:hover {
+  background-color: #0056b3;
+}
+
+
+/* Контейнер сортировки */
+.postSortContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Метки сортировки */
+.postSortContainer label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Выпадающие списки сортировки */
+.postSortContainer select {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.postSortContainer select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .postSortContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .postSortContainer select {
+    width: 100%;
+  }
+}

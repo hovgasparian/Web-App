@@ -1,0 +1,212 @@
+/* Основной контейнер */
+.postList {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок */
+.postList h1 {
+  font-size: 26px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Поисковая строка */
+.postSearchContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.postSearchContainer input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 300px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.postSearchContainer input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+.postSearchContainer button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.postSearchContainer button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.postSearchContainer button:active {
+  background-color: #003d7a;
+  transform: translateY(0);
+}
+
+/* Кнопки сортировки */
+.postSortButtons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.postSortButtons button {
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.postSortButtons button:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+.postSortButtons button:active {
+  background-color: #1e7e34;
+  transform: translateY(0);
+}
+
+.postSortButtons button.active {
+  background-color: #218838;
+  font-weight: bold;
+}
+
+/* Список постов */
+.postItem {
+  background: rgba(0, 123, 255, 0.1);
+  padding: 15px;
+  margin-bottom: 10px;
+  border-left: 4px solid #007bff;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.postItem:hover {
+  background-color: #e9ecef;
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для данных постов */
+.postItem span {
+  font-weight: bold;
+}
+
+.postItem .postContent {
+  font-size: 14px;
+  color: #555;
+}
+
+.createButton {
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.createButton:hover {
+  background-color: #0056b3;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .postSearchContainer {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .postSearchContainer input {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+
+  .postSortButtons {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .postSortButtons button {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+}
+
+
+/* Контейнер сортировки */
+.postSortContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Метки сортировки */
+.postSortContainer label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Выпадающие списки сортировки */
+.postSortContainer select {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.postSortContainer select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .postSortContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .postSortContainer select {
+    width: 100%;
+  }
+}

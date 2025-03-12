@@ -1,0 +1,23 @@
+.user-profile {
+    width: 100%;
+    height: auto;
+    background-color: #e5f1ff; /* Цвет фона */
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px auto;
+    text-align: left; /* Выравниваем текст влево */
+}
+
+.user-profile h2 {
+    text-align: center; /* Заголовок остается по центру */
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Выровнять текстовые элементы влево */
+}
+
+.user-info span {
+    font-weight: bold;
+}
