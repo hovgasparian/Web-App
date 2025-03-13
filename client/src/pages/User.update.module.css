@@ -1,0 +1,51 @@
+.editUser {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(105, 79, 79, 0.1);
+}
+
+.editUser h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.editUser form {
+    display: flex;
+    flex-direction: column;
+}
+
+.editUser input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.editUser button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.editUser button:hover {
+    background-color: #0056b3;
+}
+
+.editUser button[type="button"] {
+    background-color: #6c757d;
+    margin-top: 10px;
+}
+
+.editUser button[type="button"]:hover {
+    background-color: #5a6268;
+}

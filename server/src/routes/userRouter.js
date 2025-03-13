@@ -13,5 +13,7 @@ router.get('/', AuthMiddleware, CheckRoleMiddleware(['Admin']), controller.getUs
 router.get('/:id', controller.getUserById);
 router.post('/registration', validation(registration), controller.registration);
 router.post('/login', validation(login), controller.login);
+router.put('/update/:id', AuthMiddleware, controller.updateUser);
+router.delete('/:userIdToDelete', AuthMiddleware, CheckRoleMiddleware(['Admin']), controller.deleteUser);
 
 module.exports = router;

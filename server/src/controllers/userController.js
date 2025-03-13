@@ -56,6 +56,26 @@ class UserController {
             sendErrorResponse(res, error.message)
         }
     }
+
+    async updateUser(req, res) {
+        try {
+            const {id} = req.user;
+            const user = await userService.updateUser(id, req.body);
+            sendSuccessResponse(res, {user});
+        } catch (error) {
+            sendErrorResponse(res, error.message);
+        }
+    }
+
+    async deleteUser(req, res) {
+        try {
+            const {id} = req.params;
+            const result = await userService.deleteUser(id);
+            sendSuccessResponse(res, {result});
+        } catch (error) {
+            sendErrorResponse(res, error.message)
+        }
+    }
 }
 
 module.exports = UserController;

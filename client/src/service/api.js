@@ -35,7 +35,6 @@ const api = axios.create({
     return response.data;
   }
 
-
   export const registration = async (userData) => {
       try {
           const response = await api.post('/users/registration', userData);
@@ -50,6 +49,12 @@ const api = axios.create({
     const response = await api.post('/users/login', data)
     return response.data
   }
+
+  export const fetchUpdateUser = async (id, data) => {
+    const response = await api.put(`/users/update/${id}`, data);
+    return response.data;
+  }
+
 
   export const fetchRoles = async () => {
       try {

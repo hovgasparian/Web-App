@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { fetchUsersById } from "../service/api";
 import styles from './User.details.module.css';
 
 const UserDetails = () => {
     const {id} = useParams();
     const [user, setUser] = useState(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const getUserDetails = async () => {
@@ -39,6 +40,7 @@ const UserDetails = () => {
                         ? user.posts.map(post => post.name).join(', ')
                         : 'No posts'}
                 </p>
+                <button onClick={() => navigate(`/users/${id}/edit`)}>Edit</button>
 
             </div>
         </div>

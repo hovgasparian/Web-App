@@ -16,7 +16,7 @@ const Login = () => {
         const result = await login(credentials);
         if (result.user.token) {
             localStorage.setItem('token', result.user.token);
-            navigate('/');
+            navigate('/users');
         }
     }
 

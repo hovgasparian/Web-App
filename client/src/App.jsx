@@ -10,6 +10,7 @@ import UserDetails from './pages/User.details';
 import Profile from './pages/Profile';
 import PostDetails from './pages/Post.details';
 import PostCreate from './pages/Post.create';
+import EditUser from './pages/User.update';
 
 function App() {
     return (
@@ -22,6 +23,7 @@ function App() {
                         <Route path='/profile' element={<Profile />}/>
                         <Route path='/users' element={<Users />}/>
                         <Route path="/users/:id" element={<UserDetails />} />
+                        <Route path="/users/:id/edit" element={<EditUser />} />
                         <Route path='/posts' element={<Posts />} />
                         <Route path='/posts/create' element={<PostCreate />} />
                         <Route path='/posts/:id' element={<PostDetails />}/>
